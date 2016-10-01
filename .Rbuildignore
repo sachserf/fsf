@@ -1,2 +1,12 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+R/framework
+.cache
+out/fig
+out/data
+out/docs
+session_info.txt
+how-to-guide.md
+make.R
+scripts
+data

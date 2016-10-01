@@ -1,9 +1,19 @@
 Package: sf
-Title: What the Package Does (one line, title case)
+Title: Collection of miscellanous functions
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-Depends: R (>= 3.3.1)
-License: What license is it under?
+Authors@R: person("Frederik", "Sachser", email = "f.sachser@gmx.at", role = c("aut", "cre"))
+Description: Miscellanous functions for different purposes. For example easy
+    creation of templates for taking notes using RMarkdown.
+Depends:
+    R (>= 3.3.1)
+License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
+Depends:
+    R (>= 3.2)
+Imports:
+    utils
+Suggests:
+    rmarkdown (>= 0.9.6),
+    knitr
+RoxygenNote: 5.0.1
