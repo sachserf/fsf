@@ -1,0 +1,7 @@
+.Rproj.user
+.Rhistory
+.RData
+data
+out/fig
+out/data
+out/docs
