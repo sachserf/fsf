@@ -58,7 +58,7 @@ note <-
              start = 1,
              stop = nchar(basename(file)) - 4)
     if (file.exists(file) == TRUE) {
-      warning("File exists.")
+      utils::file.edit(file)
     }
     else {
       cat(
