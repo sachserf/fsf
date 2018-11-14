@@ -10,9 +10,14 @@ iimg <- function(caption = "Enter caption here.", path2image = file.choose(), as
   # prerequisites
   dir_dest <- file.path(getwd(), assets_dir)
   img_name <- basename(path2image)
-  img_dest <- file.path(dir_dest, img_name)
+  img_name_tpe <- file_txt_pre_ext(filename = img_name, txt_pre_ext = now()) # add timestamp
+
   # copy file to destination
   dir.create(dir_dest, showWarnings = FALSE)
+  img_dest <- file.path(dir_dest, img_name)
+  if (file.exist(img_dest)) {
+    img_dest <- file.path(dir_dest, img_name_tpe)
+  }
   file.copy(from = path2image, to = img_dest)
   # write predefined text for convenience
   mytext <- paste0("![", caption, "](", img_dest, ")\n\n")

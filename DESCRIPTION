@@ -2,7 +2,7 @@ Package: sf
 Title: Collection of miscellanous functions
 Version: 0.0.0.9001
 Authors@R: person("Frederik", "Sachser", email = "f.sachser@gmx.at", role = c("aut", "cre"))
-Description: Miscellanous functions for different purposes. For example easy creation of templates for taking notes using RMarkdown.
+Description: Miscellanous functions for different purposes. 
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
