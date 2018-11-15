@@ -14,7 +14,8 @@ fe <- function(file, ...) {
       file.edit(file, ...)
     }
   } else {
-    writeLines(text = paste0("---\noutput: github_document\n---\n\n"), con = file)
+    dir.create(path = dirname(file), recursive = TRUE, showWarnings = FALSE)
+    writeLines(text = paste0("---\noutput: github_document\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(dev = c('png', 'pdf'), dpi = 300, dev.args = list(bg = 'transparent'))\n```\n\n"), con = file)
     file.edit(file, ...)
   }
 }
