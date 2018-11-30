@@ -9,7 +9,8 @@ LazyData: true
 Depends:
     R (>= 3.2)
 Imports:
-    utils, rstudioapi, e1071, stringr, tools, stats, skimr, rio, sheetr
+    utils, rstudioapi, e1071, stringr, tools, stats, skimr, rio, sheetr, magrittr
+Remotes: github::d-notebook/sheetr
 Suggests:
     rmarkdown (>= 0.9.6),
     knitr
