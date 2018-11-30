@@ -6,6 +6,8 @@
 #' @importFrom magrittr "%>%"
 #' @note Reoccurring events are not supported!
 #' @return data.frame
+#'
+#' @author Frederik Sachser
 #' @export
 ics2table <- function(calendar_ics, calname = NULL) {
   x <- readLines(calendar_ics, warn = FALSE)

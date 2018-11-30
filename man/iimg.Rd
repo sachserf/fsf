@@ -8,12 +8,15 @@ iimg(caption = "Enter caption here.", path2image = file.choose(),
   assets_dir = "_assets")
 }
 \arguments{
-\item{caption}{Write a caption (optional).}
+\item{caption}{Character. Write a caption (optional).}
 
-\item{path2image}{Specify filepath. Opens a window to choose a file per default.}
+\item{path2image}{Character. Specify filepath. Opens a window to choose a file per default.}
 
-\item{assets_dir}{Specify name for a target directory to copy the image.}
+\item{assets_dir}{Character. Specify name for a target directory to copy the image.}
 }
 \description{
 This function will copy a specified image (file) and write predefined text in markdown-style.
+}
+\author{
+Frederik Sachser
 }

@@ -1,5 +1,7 @@
 #' Set up customized skimr output
 #'
+#' @author Frederik Sachser
+#'
 #' @export
 skim_set <- function() {
   skim_num <- list(missing = NULL,

@@ -1,4 +1,4 @@
-#' My custom theme
+#' sf - custom ggplot-theme
 #'
 #' @param base_size Integer. Specify font size.
 #' @param base_family Character. Specify font.
@@ -6,6 +6,7 @@
 #' @param strip_bg_blank Logical. Should background of strip should be grey or blank?
 #' @param legend_bg_blank Logical. Should background of legend should be grey or blank?
 #'
+#' @author Frederik Sachser
 #' @export
 gg_theme_sf <- function(base_size=12, base_family="Helvetica", x_angle = 45, strip_bg_blank = FALSE, legend_bg_blank = TRUE) {
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) + # %+replace%

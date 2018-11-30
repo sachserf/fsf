@@ -1,25 +1,25 @@
-#' framework version of file.edit
+#' write custom Rmd-template or open existing file
 #'
-#' @description This function will open existing files or create a new one by calling 'framework::template_rmd'.
-#' @param file Character or integer. Specify full file path to open or create a file. If the value is an integer and 'framework_params' is in your search path it will look up the index of the input_file (at the point in time of the last processing) to open it.
-#' @param ... Arguments passed to 'utile::file_edit'.
+#' @description This function will open existing files or create a new one.
+#' @param file Character. Specify full file path to open or create a file.
 #'
-#' @seealso \code{\link[utils]{file.edit}}, \code{\link{template_rmd}}
+#' @param ... Arguments passed to 'utils::file.edit'.
+#'
+#' @seealso \code{\link[utils]{file.edit}}
+#'
+#' @author Frederik Sachser
 #' @export
 fe <- function(file, ...) {
   if (file.exists(file)) {
     if (Sys.readlink(file) != "") {
-      file.edit(Sys.readlink(file), ...)
+      utils::file.edit(Sys.readlink(file), ...)
     } else {
-      file.edit(file, ...)
+      utils::file.edit(file, ...)
     }
   } else {
     dir.create(path = dirname(file), recursive = TRUE, showWarnings = FALSE)
     writeLines(text = paste0("---\noutput: github_document\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(dev = c('png', 'pdf'), dpi = 300, dev.args = list(bg = 'transparent'))\n```\n\n"), con = file)
-    file.edit(file, ...)
+    utils::file.edit(file, ...)
   }
 }
-
-
-
 

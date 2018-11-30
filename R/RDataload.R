@@ -4,8 +4,8 @@
 #'
 #' @param path Character. Specify file path where RData-files are stored.
 #'
+#' @author Frederik Sachser
 #' @export
-#'
 RDataload <- function(path = "inst/extdata") {
   sapply(list.files(path = path, pattern = ".RData", full.names = TRUE, recursive = TRUE), load, envir = .GlobalEnv)
 }

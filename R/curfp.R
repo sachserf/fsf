@@ -38,5 +38,3 @@ curfp <- function() {
   return(current_file_path)
 }
 
-
-

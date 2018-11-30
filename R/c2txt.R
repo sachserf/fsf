@@ -1,10 +1,12 @@
-#' represent vector as text
+#' Convert vector as text
 #'
 #' @param vector Vector that should be represented as text.
 #' @param frame Character. Specify character that should be printed before and after each element of the vector.
 #' @param separator Character. Specify character that should be printed between each element of the vector.
 #'
 #' @return Text representation of the vector.
+#'
+#' @author Frederik Sachser
 #' @export
 #'
 #' @examples c2txt(names(iris))

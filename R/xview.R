@@ -2,15 +2,16 @@
 #'
 #' @description This function will export an object to a file (using package "rio"). A system command is invoked to open the file afterwards.
 #'
-#' @param x Object to export (e.g. a data.frame)
+#' @param x Object to export (e.g. data.frame)
 #' @param file Specify filename. Directories will not be created.
-#' @param deldep Logical. Specify if deprecated files should be deleted.
+#' @param deldep Logical. Specify if deprecated files should be deleted. works only if file_path begins with "xview_" followed by 14 integer values (default for exporting new files).
 #' @param ... Further params passed to rio::export (e.g. overwrite, row.names, etc.)
 #'
 #' @seealso \code{\link[rio]{export}}
 #'
+#' @author Frederik Sachser
 #' @export
-xview <- function(x, file = gsub("-|\\ |:", "", paste0("xview_", Sys.time(), ".xlsx")), deldep = TRUE, list_collapse = TRUE, ...) {
+xview <- function(x, file = paste0("xview_", now(), ".xlsx"), deldep = TRUE, list_collapse = TRUE, ...) {
   if (deldep == TRUE) {
     lapply(list.files(path = ".", pattern = "^xview_\\d{14}"), file.remove, recursive = TRUE)
   }
@@ -27,7 +28,7 @@ xview <- function(x, file = gsub("-|\\ |:", "", paste0("xview_", Sys.time(), ".x
 
   if (list_collapse == TRUE & class(x) == "list") {
     file <- paste0(tools::file_path_sans_ext(file), ".csv")
-    write_dataframes_to_csv(x, file, na = na) ## devtools::install_github('d-notebook/sheetr')
+    sheetr::write_dataframes_to_csv(x, file, na = na) ## devtools::install_github('d-notebook/sheetr')
   } else {
     rio::export(x = x, file = file, ...)
   }

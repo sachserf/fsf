@@ -6,6 +6,7 @@
 #' @param freq_only Logical. Specify if custom_fun should be included.
 #' @param freq_sort Logical. Specify if output should be sorted according to frequency of common columns.
 #' @author Frederik Sachser
+#' @export
 
 comcomcol <-
   function(...,
