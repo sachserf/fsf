@@ -4,7 +4,8 @@
 \alias{comcomcol}
 \title{COMpare COMmon COLumns of multiple dataframes}
 \usage{
-comcomcol(..., custom_fun = class, freq_only = FALSE, freq_sort = TRUE)
+comcomcol(..., custom_fun = class, freq_only = FALSE,
+  freq_sort = TRUE)
 }
 \arguments{
 \item{...}{Objects of class data.frame.}

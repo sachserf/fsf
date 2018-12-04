@@ -14,13 +14,15 @@ xview(x, file = paste0("xview_", now(), ".xlsx"), deldep = TRUE,
 
 \item{deldep}{Logical. Specify if deprecated files should be deleted. works only if file_path begins with "xview_" followed by 14 integer values (default for exporting new files).}
 
+\item{list_collapse}{Logical. Collapse list of dataframes? (depends on github-package d-notebook/sheetr)}
+
 \item{...}{Further params passed to rio::export (e.g. overwrite, row.names, etc.)}
 }
 \description{
 This function will export an object to a file (using package "rio"). A system command is invoked to open the file afterwards.
 }
 \seealso{
-\code{\link[rio]{export}}
+\code{\link[rio]{export}}, \code{\link[sheetr]{write_dataframes_to_csv}}
 }
 \author{
 Frederik Sachser
