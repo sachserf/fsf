@@ -12,14 +12,14 @@
 fe <- function(file, ...) {
   if (file.exists(file)) {
     if (Sys.readlink(file) != "") {
-      utils::file.edit(Sys.readlink(file), ...)
+      file.edit(Sys.readlink(file), ...)
     } else {
-      utils::file.edit(file, ...)
+      file.edit(file, ...)
     }
   } else {
     dir.create(path = dirname(file), recursive = TRUE, showWarnings = FALSE)
     writeLines(text = paste0("---\noutput: github_document\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(dev = c('png', 'pdf'), dpi = 300, dev.args = list(bg = 'transparent'))\n```\n\n"), con = file)
-    utils::file.edit(file, ...)
+    file.edit(file, ...)
   }
 }
 

@@ -1,0 +1,4 @@
+Name: Insert "%in%" to current cursor position
+Description: Insert "%in%" to current cursor position (within RStudio)
+Binding: inin
+Interactive: false
