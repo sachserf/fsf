@@ -7,9 +7,9 @@ License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
 Depends:
-    R (>= 3.2), tidyverse, skimr
+    R (>= 3.2)
 Imports:
-    utils, rstudioapi, e1071, stringr, tools, stats, rio, sheetr, magrittr, dplyr, ggplot2, tidyr
+    utils, rstudioapi, e1071, stringr, tools, stats, rio, sheetr, magrittr, dplyr, ggplot2, tidyr, skimr
 Remotes: github::d-notebook/sheetr
 Suggests:
     rmarkdown (>= 0.9.6),
