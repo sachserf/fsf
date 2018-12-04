@@ -30,7 +30,7 @@ ics2table <- function(calendar_ics, calname = NULL) {
   foo <- diff(foo)
   dfcal$GROUP <- rep(1:length(foo), foo)
 
-  dfcal <- tidyr::spread(data = dfcal, key = KEY, value = VALUE) #
+  dfcal <- tidyr::spread(data = dfcal, key = "KEY", value = "VALUE") #
 
   names(dfcal) <- gsub(";|=|/" , "", names(dfcal))
   foo <- which(startsWith(names(dfcal), "DTSTART"))

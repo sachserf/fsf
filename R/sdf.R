@@ -10,7 +10,7 @@
 sdf <- function(data, n = 3) {
   foo <- cbind(data.frame(varname = names(data), class = t(data.frame(lapply(lapply(data, class), paste, collapse = ", ")))[,1, drop = FALSE]),
                data.frame("NA_sum" = colSums(sapply(data, is.na))),
-               data.frame(t(head(data, n = n))))
+               data.frame(t(utils::head(data, n = n))))
   row.names(foo) <- NULL
   message("nrow: ", nrow(data), "      ncol: ", ncol(data))
   return(foo)

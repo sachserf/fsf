@@ -6,8 +6,9 @@
 #' @param file Specify filename. Directories will not be created.
 #' @param deldep Logical. Specify if deprecated files should be deleted. works only if file_path begins with "xview_" followed by 14 integer values (default for exporting new files).
 #' @param ... Further params passed to rio::export (e.g. overwrite, row.names, etc.)
+#' @param list_collapse Logical. Collapse list of dataframes? (depends on github-package d-notebook/sheetr)
 #'
-#' @seealso \code{\link[rio]{export}}
+#' @seealso \code{\link[rio]{export}}, \code{\link[sheetr]{write_dataframes_to_csv}}
 #'
 #' @author Frederik Sachser
 #' @export
@@ -28,7 +29,7 @@ xview <- function(x, file = paste0("xview_", now(), ".xlsx"), deldep = TRUE, lis
 
   if (list_collapse == TRUE & class(x) == "list") {
     file <- paste0(tools::file_path_sans_ext(file), ".csv")
-    sheetr::write_dataframes_to_csv(x, file, na = na) ## devtools::install_github('d-notebook/sheetr')
+    sheetr::write_dataframes_to_csv(x, file, na = "na") ## devtools::install_github('d-notebook/sheetr')
   } else {
     rio::export(x = x, file = file, ...)
   }
