@@ -2,9 +2,9 @@
 #' @description Contrary to utils::data the function will only return a character vector of data within a package.
 #' @param pkg Character. Specify Name of an installed package.
 #'
-#' @seealso \code{\link[sf]{yank_pkgdata}}
+#' @seealso \code{\link[sf]{pkgdata_yank}}, \code{\link[sf]{pkgdata_write}}
 #' @export
-ls_pkgdata <- function(pkg) {
+pkgdata_ls <- function(pkg) {
   any_data <- system.file("data/Rdata.rds", package = pkg)
 
   if (any_data == "") {
