@@ -5,6 +5,7 @@
 #' @param x Object to export (e.g. data.frame)
 #' @param file Specify filename. Directories will not be created.
 #' @param deldep Logical. Specify if deprecated files should be deleted. works only if file_path begins with "xview_" followed by 14 integer values (default for exporting new files).
+#' @param open_doc Logical. Should document be opened afterwards?
 #' @param ... Further params passed to rio::export (e.g. overwrite, row.names, etc.)
 #' @param list_collapse Logical. Collapse list of dataframes? (depends on github-package d-notebook/sheetr)
 #'
@@ -12,7 +13,7 @@
 #'
 #' @author Frederik Sachser
 #' @export
-xview <- function(x, file = paste0("xview_", now(), ".xlsx"), deldep = TRUE, list_collapse = TRUE, ...) {
+xview <- function(x, file = paste0("xview_", now(), ".xlsx"), deldep = TRUE, list_collapse = TRUE, open_doc = TRUE, ...) {
   if (deldep == TRUE) {
     lapply(list.files(path = ".", pattern = "^xview_\\d{14}"), file.remove, recursive = TRUE)
   }
@@ -33,6 +34,8 @@ xview <- function(x, file = paste0("xview_", now(), ".xlsx"), deldep = TRUE, lis
   } else {
     rio::export(x = x, file = file, ...)
   }
-  system(paste(cmd, file))
+  if (open_doc == TRUE) {
+    system(paste(cmd, file))
+  }
 }
 
