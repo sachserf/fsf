@@ -8,7 +8,7 @@
 #'
 pkgdata_yank <- function(pkg, target_dir = 'inst/extdata') {
 
-  listofdf <- ls_pkgdata(pkg)
+  listofdf <- pkgdata_ls(pkg)
   if (length(listofdf) == 0) stop("No data was found in package.")
 
   dir.create(path = target_dir, showWarnings = FALSE, recursive = TRUE)
