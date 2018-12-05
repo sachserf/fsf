@@ -4,12 +4,14 @@
 \alias{pkgdata_yank}
 \title{Copy all dataframes of an installed R-package}
 \usage{
-pkgdata_yank(pkg, target_dir = "inst/extdata")
+pkgdata_yank(pkg, target_dir = "inst/extdata", listofdf = NULL)
 }
 \arguments{
 \item{pkg}{Character. Name of the installed package.}
 
 \item{target_dir}{Character. Specify target directory for dataframes (one RData-file for each dataframe).}
+
+\item{listofdf}{Character. Specify subset of dataframes.}
 }
 \description{
 Copy all dataframes of an installed R-package
