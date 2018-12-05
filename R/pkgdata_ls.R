@@ -13,6 +13,8 @@ pkgdata_ls <- function(pkg) {
     message("No data was found in package.")
     } else {
       pkg_chr <- unlist(readRDS(any_data))
-      return(pkg_chr)
+      return(as.vector(pkg_chr))
     }
 }
+
+

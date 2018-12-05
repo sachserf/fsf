@@ -2,15 +2,22 @@
 #'
 #' @param pkg Character. Name of the installed package.
 #' @param target_dir Character. Specify target directory for dataframes (one RData-file for each dataframe).
+#' @param listofdf Character. Specify subset of dataframes.
 #'
 #' @seealso \code{\link[sf]{pkgdata_ls}}, \code{\link[sf]{pkgdata_write}}
 #' @export
 #'
-pkgdata_yank <- function(pkg, target_dir = 'inst/extdata') {
+pkgdata_yank <- function(pkg, target_dir = 'inst/extdata', listofdf = NULL) {
 
-  listofdf <- pkgdata_ls(pkg)
-  if (length(listofdf) == 0) stop("No data was found in package.")
+  if (is.null(listofdf)) {
+    listofdf <- sf::pkgdata_ls(pkg)
+  }
 
+  if (length(listofdf) == 0) {
+    stop("No data was found in package.")
+  } else {
+
+  utils::data(list = listofdf, package = pkg, envir = environment())
   dir.create(path = target_dir, showWarnings = FALSE, recursive = TRUE)
 
   RData_fun <- function(objectname) {
@@ -24,4 +31,5 @@ pkgdata_yank <- function(pkg, target_dir = 'inst/extdata') {
   message(paste0("Wrote the following data frames into directory '", target_dir, "':
 ", paste(listofdf, collapse = "
 ")))
+  }
 }
