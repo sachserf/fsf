@@ -5,7 +5,7 @@
 \title{External View}
 \usage{
 xview(x, file = paste0("xview_", now(), ".xlsx"), deldep = TRUE,
-  list_collapse = TRUE, ...)
+  list_collapse = TRUE, open_doc = TRUE, ...)
 }
 \arguments{
 \item{x}{Object to export (e.g. data.frame)}
@@ -15,6 +15,8 @@ xview(x, file = paste0("xview_", now(), ".xlsx"), deldep = TRUE,
 \item{deldep}{Logical. Specify if deprecated files should be deleted. works only if file_path begins with "xview_" followed by 14 integer values (default for exporting new files).}
 
 \item{list_collapse}{Logical. Collapse list of dataframes? (depends on github-package d-notebook/sheetr)}
+
+\item{open_doc}{Logical. Should document be opened afterwards?}
 
 \item{...}{Further params passed to rio::export (e.g. overwrite, row.names, etc.)}
 }
