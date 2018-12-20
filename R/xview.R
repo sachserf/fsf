@@ -20,7 +20,7 @@ xview <- function(x, file = paste0("xview_", now(), ".xlsx"), deldep = TRUE, lis
   if (Sys.info()["sysname"] == "Linux") {
     cmd <- "xdg-open"
   } else if (Sys.info()["sysname"] == "Windows") {
-    cmd <- "start"
+    cmd <- "shell.exec" # start
   } else if (Sys.info()["sysname"] == "Darwin") {
     cmd <- "open"
   } else if (Sys.info()["sysname"] %in% c("Linux", "Darwin", "Windows") == FALSE) {
@@ -30,7 +30,7 @@ xview <- function(x, file = paste0("xview_", now(), ".xlsx"), deldep = TRUE, lis
 
   if (list_collapse == TRUE & class(x) == "list") {
     file <- paste0(tools::file_path_sans_ext(file), ".csv")
-    sheetr::write_dataframes_to_csv(x, file, na = "na") ## devtools::install_github('d-notebook/sheetr')
+    sheetr::write_dataframes_to_csv(x, file) ## devtools::install_github('d-notebook/sheetr') , na = "na"
   } else {
     rio::export(x = x, file = file, ...)
   }
