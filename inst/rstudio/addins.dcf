@@ -2,3 +2,9 @@ Name: Insert "%in%" to current cursor position
 Description: Insert "%in%" to current cursor position (within RStudio)
 Binding: inin
 Interactive: false
+
+Name: Insert "<mark></mark>" to current cursor position
+Description: Insert "<mark></mark>" to current cursor position (within RStudio)
+Binding: insert_mark
+Interactive: false
+
