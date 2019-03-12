@@ -24,3 +24,6 @@ add Test-statement to predefined dataframe
 \examples{
 atest(iris$Species, "\%in\% c('setosa', 'virginica', 'versicolor')")
 }
+\seealso{
+\code{\link[fsf]{utest}}, \code{\link[fsf]{stest}}
+}

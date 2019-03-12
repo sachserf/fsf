@@ -13,7 +13,7 @@ pkgdata_ls(pkg)
 Contrary to utils::data the function will only return a character vector of data within a package.
 }
 \seealso{
-\code{\link[sf]{pkgdata_yank}}, \code{\link[sf]{pkgdata_write}}
+\code{\link[fsf]{pkgdata_yank}}, \code{\link[fsf]{pkgdata_write}}
 }
 \author{
 Frederik Sachser
