@@ -1,11 +1,11 @@
 #' print Summary of test_df
 #'
-#' @param test_df A dataframe of specific format (output from sf::atest).
+#' @param test_df A dataframe of specific format (output from fsf::atest).
 #' @param return Logical. Specify if test_df should be returned.
 #'
 #' @export
 #'
-#' @seealso \code{\link[sf]{atest}}
+#' @seealso \code{\link[fsf]{atest}}, \code{\link[fsf]{utest}}
 stest <- function(test_df = test_dataframe, return = TRUE) {
   diffs <- which(test_df$EVALUATION == FALSE)
   if (length(diffs) == 0) {

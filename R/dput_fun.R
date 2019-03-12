@@ -1,9 +1,9 @@
 #' Dput a function
 #'
 #' @description Choose a function of an installed R-package and save it to the specified target.
-#' @param pkg_fun Character. Name of a package and function separated by '::'. E.g. sf::dput_fun. Do not use quotation marks.
+#' @param pkg_fun Character. Name of a package and function separated by '::'. E.g. fsf::dput_fun. Do not use quotation marks.
 #' @param target_dir Character. Specify the file path, where you want to write the file.
-#' @param rm_pattern Character. Choose any pattern that should be removed. E.g. 'sf::' to exclude the name of the package sf.
+#' @param rm_pattern Character. Choose any pattern that should be removed. E.g. 'fsf::' to exclude the name of the package sf.
 #' @author Frederik Sachser
 #' @export
 dput_fun <-
