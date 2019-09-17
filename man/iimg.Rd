@@ -5,7 +5,7 @@
 \title{Insert Image (markdown)}
 \usage{
 iimg(caption = "Enter caption here.", path2image = file.choose(),
-  assets_dir = "_assets")
+  assets_dir = "_assets", html = TRUE)
 }
 \arguments{
 \item{caption}{Character. Write a caption (optional).}
@@ -13,6 +13,8 @@ iimg(caption = "Enter caption here.", path2image = file.choose(),
 \item{path2image}{Character. Specify filepath. Opens a window to choose a file per default.}
 
 \item{assets_dir}{Character. Specify name for a target directory to copy the image.}
+
+\item{html}{Logical. Choose between html or markdown notation.}
 }
 \description{
 This function will copy a specified image (file) and write predefined text in markdown-style.

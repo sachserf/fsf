@@ -13,3 +13,7 @@ Description: Insert "<mark></mark>" to current cursor position (within RStudio)
 Binding: insert_mark
 Interactive: false
 
+Name: Insert horizontal line to current cursor position
+Description: Insert "-" 80 times to current cursor position (within RStudio)
+Binding: pc
+Interactive: false
