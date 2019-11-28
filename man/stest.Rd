@@ -7,7 +7,7 @@
 stest(test_df = test_dataframe, return = TRUE)
 }
 \arguments{
-\item{test_df}{A dataframe of specific format (output from sf::atest).}
+\item{test_df}{A dataframe of specific format (output from fsf::atest).}
 
 \item{return}{Logical. Specify if test_df should be returned.}
 }
@@ -15,5 +15,5 @@ stest(test_df = test_dataframe, return = TRUE)
 print Summary of test_df
 }
 \seealso{
-\code{\link[sf]{atest}}
+\code{\link[fsf]{atest}}, \code{\link[fsf]{utest}}
 }

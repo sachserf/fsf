@@ -28,7 +28,7 @@ xview <- function(x, file = paste0("xview_", now(), ".xlsx"), deldep = TRUE, lis
   }
   message("Exporting file to: ", file, " ...")
 
-  if (list_collapse == TRUE & class(x) == "list") {
+  if (list_collapse == TRUE & "list" %in% class(x)) {
     file <- paste0(tools::file_path_sans_ext(file), ".csv")
     sheetr::write_dataframes_to_csv(x, file) ## devtools::install_github('d-notebook/sheetr') , na = "na"
   } else {

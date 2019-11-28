@@ -4,7 +4,7 @@
 #' @param target_dir Character. Specify target directory (default 'inst/extdata')
 #'
 #' @note directory will be written recursively and existing files of the same name will be overwritten.
-#' @seealso \code{\link[sf]{pkgdata_ls}}, \code{\link[sf]{pkgdata_yank}}
+#' @seealso \code{\link[fsf]{pkgdata_ls}}, \code{\link[fsf]{pkgdata_yank}}
 #' @export
 pkgdata_write <- function(listofdf, target_dir = 'inst/extdata') {
 

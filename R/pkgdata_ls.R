@@ -3,7 +3,7 @@
 #' @description Contrary to utils::data the function will only return a character vector of data within a package.
 #' @param pkg Character. Specify Name of an installed package.
 #'
-#' @seealso \code{\link[sf]{pkgdata_yank}}, \code{\link[sf]{pkgdata_write}}
+#' @seealso \code{\link[fsf]{pkgdata_yank}}, \code{\link[fsf]{pkgdata_write}}
 #' @author Frederik Sachser
 #' @export
 pkgdata_ls <- function(pkg) {

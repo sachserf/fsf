@@ -20,7 +20,7 @@ Text representation of the vector.
 Convert vector as text
 }
 \examples{
-c2txt(names(iris))
+c2txt(names(iris)); c2txt(paste0(letters, "='", 1:length(letters), "'"), separator = ",", frame = "")
 }
 \author{
 Frederik Sachser

@@ -4,13 +4,13 @@
 #' @param target_dir Character. Specify target directory for dataframes (one RData-file for each dataframe).
 #' @param listofdf Character. Specify subset of dataframes.
 #'
-#' @seealso \code{\link[sf]{pkgdata_ls}}, \code{\link[sf]{pkgdata_write}}
+#' @seealso \code{\link[fsf]{pkgdata_ls}}, \code{\link[fsf]{pkgdata_write}}
 #' @export
 #'
 pkgdata_yank <- function(pkg, target_dir = 'inst/extdata', listofdf = NULL) {
 
   if (is.null(listofdf)) {
-    listofdf <- sf::pkgdata_ls(pkg)
+    listofdf <- fsf::pkgdata_ls(pkg)
   }
 
   if (length(listofdf) == 0) {

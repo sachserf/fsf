@@ -4,8 +4,14 @@
 \alias{xview}
 \title{External View}
 \usage{
-xview(x, file = paste0("xview_", now(), ".xlsx"), deldep = TRUE,
-  list_collapse = TRUE, open_doc = TRUE, ...)
+xview(
+  x,
+  file = paste0("xview_", now(), ".xlsx"),
+  deldep = TRUE,
+  list_collapse = TRUE,
+  open_doc = TRUE,
+  ...
+)
 }
 \arguments{
 \item{x}{Object to export (e.g. data.frame)}

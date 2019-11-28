@@ -18,5 +18,5 @@ This function provides a fast way to write multiple dataframes into a directory.
 directory will be written recursively and existing files of the same name will be overwritten.
 }
 \seealso{
-\code{\link[sf]{pkgdata_ls}}, \code{\link[sf]{pkgdata_yank}}
+\code{\link[fsf]{pkgdata_ls}}, \code{\link[fsf]{pkgdata_yank}}
 }

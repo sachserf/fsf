@@ -7,8 +7,11 @@
 utest(test_df = test_dataframe)
 }
 \arguments{
-\item{test_df}{A dataframe of specific format (output from sf::atest).}
+\item{test_df}{A dataframe of specific format (output from fsf::atest).}
 }
 \description{
 Undo last Test
+}
+\seealso{
+\code{\link[fsf]{atest}}, \code{\link[fsf]{stest}}
 }

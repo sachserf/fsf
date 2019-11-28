@@ -1,8 +1,12 @@
-#' insert in
-#' @description function for RStudio addin. Assign it to some custom shortcut to insert '%in%' to your current cursor position.
+#' Paste Character
+#'
+#' @param char Character. Specify Character to paste.
+#' @param times Repeat character n times. Default = 80
+#'
 #' @export
-inin <- function() {
-  text <- "%in%"
+pc <- function(char = "-", times = 80) {
+  text <- paste(rep(char, times), collapse = "")
+
   if (rstudioapi::isAvailable()) {
     rstudioapi::insertText(
       location = c(
@@ -13,4 +17,3 @@ inin <- function() {
     )
   }
 }
-

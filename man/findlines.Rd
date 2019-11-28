@@ -4,8 +4,13 @@
 \alias{findlines}
 \title{Find lines in a bunch of files}
 \usage{
-findlines(expression = "# magic word", exclusive = FALSE, path = ".",
-  filepattern = "\\\\.R$|\\\\.Rmd$", recursive = TRUE)
+findlines(
+  expression = "# magic word",
+  exclusive = FALSE,
+  path = ".",
+  filepattern = "\\\\.R$|\\\\.Rmd$",
+  recursive = TRUE
+)
 }
 \arguments{
 \item{expression}{Character. Specify expression to match the line.}

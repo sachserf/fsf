@@ -17,5 +17,5 @@ pkgdata_yank(pkg, target_dir = "inst/extdata", listofdf = NULL)
 Copy all dataframes of an installed R-package
 }
 \seealso{
-\code{\link[sf]{pkgdata_ls}}, \code{\link[sf]{pkgdata_write}}
+\code{\link[fsf]{pkgdata_ls}}, \code{\link[fsf]{pkgdata_write}}
 }

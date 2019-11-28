@@ -8,6 +8,7 @@
 #'
 #' @export
 #'
+#' @seealso \code{\link[fsf]{utest}}, \code{\link[fsf]{stest}}
 #' @examples atest(iris$Species, "%in% c('setosa', 'virginica', 'versicolor')")
 atest <- function(object, expect, description, test_df = test_dataframe, assign = TRUE) {
   out <- deparse(substitute(test_df))

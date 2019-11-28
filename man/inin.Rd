@@ -7,5 +7,5 @@
 inin()
 }
 \description{
-function for RStudio addin. Assign it to some custom shortcut to insert '%in%' to yout current cursor position.
+function for RStudio addin. Assign it to some custom shortcut to insert '%in%' to your current cursor position.
 }
