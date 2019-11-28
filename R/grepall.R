@@ -10,7 +10,7 @@
 #' @examples testdata <- data.frame(a = c(1, "?"), b = 1:2, C = c("?", "?"), d = c("?", "a"), stringsAsFactors = FALSE)
 #' index <- which(as.matrix(testdata) == "?", arr.ind = TRUE)
 #' testdata[index]
-grepall <- function(dataframe, string, ..., print_values = TRUE) {
+  grepall <- function(dataframe, string, print_values = FALSE, ...) {
 
   foo <- as.matrix(dataframe)
   index1d <- which(grepl(pattern = string, x = foo, ...), arr.ind = TRUE)
@@ -20,10 +20,20 @@ grepall <- function(dataframe, string, ..., print_values = TRUE) {
   index2d <- which(fooma == 1, arr.ind = TRUE)
 
   if (print_values == TRUE) {
-    print(dataframe[index2d])
+    printdf <- data.frame(colnames = names(dataframe)[index2d[,2]],
+                          values = dataframe[index2d])
+    print(printdf)
   }
 
-  message("List with index returned invisible")
+  message("\nunique colnames with string:")
+  message(fsf::c2txt(names(dataframe)[unique(index2d[,2])], frame = "\"", separator = "\n"))
+
+  message("\nunique strings:")
+  message(fsf::c2txt(unique(dataframe[index2d]), frame = "\"", separator = "\n"))
+
+  message("\nFound ", nrow(index2d), " matches in ", length(unique(index2d[,2])), " columns.")
+
+  message("\nIndex returned invisible.")
   return(invisible(index2d))
 
 #     dataframe <- dplyr::as_tibble(dataframe)

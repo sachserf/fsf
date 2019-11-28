@@ -1,6 +1,6 @@
 Package: fsf
 Title: Collection of miscellanous functions
-Version: 0.0.0.9008
+Version: 0.0.0.9009
 Authors@R: person("Frederik", "Sachser", email = "f.sachser@gmx.at", role = c("aut", "cre"))
 Description: Miscellanous functions for different tasks.
 License: GPL (>= 2)

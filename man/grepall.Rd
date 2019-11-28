@@ -4,16 +4,16 @@
 \alias{grepall}
 \title{grep string for all columns of type character}
 \usage{
-grepall(dataframe, string, ..., print_values = TRUE)
+grepall(dataframe, string, print_values = FALSE, ...)
 }
 \arguments{
 \item{dataframe}{Object of class data.frame}
 
 \item{string}{Character. Specify string to search for}
 
-\item{...}{further arguments passed to grep}
-
 \item{print_values}{Logical. Choose wether to print values.}
+
+\item{...}{further arguments passed to grep}
 }
 \description{
 grep string for all columns of type character
