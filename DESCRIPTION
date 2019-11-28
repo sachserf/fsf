@@ -14,4 +14,4 @@ Remotes: github::d-notebook/sheetr
 Suggests:
     rmarkdown (>= 0.9.6),
     knitr
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.0

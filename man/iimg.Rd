@@ -4,8 +4,12 @@
 \alias{iimg}
 \title{Insert Image (markdown)}
 \usage{
-iimg(caption = "Enter caption here.", path2image = file.choose(),
-  assets_dir = "_assets", html = TRUE)
+iimg(
+  caption = "Enter caption here.",
+  path2image = file.choose(),
+  assets_dir = "_assets",
+  html = TRUE
+)
 }
 \arguments{
 \item{caption}{Character. Write a caption (optional).}

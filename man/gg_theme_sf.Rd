@@ -4,8 +4,13 @@
 \alias{gg_theme_sf}
 \title{sf - custom ggplot-theme}
 \usage{
-gg_theme_sf(base_size = 12, base_family = "Helvetica", x_angle = 45,
-  strip_bg_blank = FALSE, legend_bg_blank = TRUE)
+gg_theme_sf(
+  base_size = 12,
+  base_family = "Helvetica",
+  x_angle = 45,
+  strip_bg_blank = FALSE,
+  legend_bg_blank = TRUE
+)
 }
 \arguments{
 \item{base_size}{Integer. Specify font size.}

@@ -4,8 +4,7 @@
 \alias{strsplitunnest}
 \title{Split a string into multiple rows}
 \usage{
-strsplitunnest(dataframe, columnname, separator = ",",
-  affix = "_split")
+strsplitunnest(dataframe, columnname, separator = ",", affix = "_split")
 }
 \arguments{
 \item{dataframe}{Object of class "data.frame" or tibble.}

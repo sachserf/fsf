@@ -4,8 +4,7 @@
 \alias{atest}
 \title{add Test-statement to predefined dataframe}
 \usage{
-atest(object, expect, description, test_df = test_dataframe,
-  assign = TRUE)
+atest(object, expect, description, test_df = test_dataframe, assign = TRUE)
 }
 \arguments{
 \item{object}{The object to be testet (should be a vector). In case of a list only first element will be used for evaluation.}

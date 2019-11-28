@@ -18,3 +18,8 @@ grepall(dataframe, string, ..., print_values = TRUE)
 \description{
 grep string for all columns of type character
 }
+\examples{
+testdata <- data.frame(a = c(1, "?"), b = 1:2, C = c("?", "?"), d = c("?", "a"), stringsAsFactors = FALSE)
+index <- which(as.matrix(testdata) == "?", arr.ind = TRUE)
+testdata[index]
+}
