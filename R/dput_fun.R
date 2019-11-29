@@ -7,7 +7,7 @@
 #' @author Frederik Sachser
 #' @export
 dput_fun <-
-function(pkg_fun, target_dir, rm_pattern = FALSE)
+function(pkg_fun, target_dir = "R", rm_pattern = FALSE)
 {
     if (dir.exists(target_dir) == FALSE) {
         dir.create(target_dir, recursive = TRUE)

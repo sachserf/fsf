@@ -4,7 +4,7 @@
 \alias{dput_fun}
 \title{Dput a function}
 \usage{
-dput_fun(pkg_fun, target_dir, rm_pattern = FALSE)
+dput_fun(pkg_fun, target_dir = "R", rm_pattern = FALSE)
 }
 \arguments{
 \item{pkg_fun}{Character. Name of a package and function separated by '::'. E.g. fsf::dput_fun. Do not use quotation marks.}

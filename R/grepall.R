@@ -12,7 +12,7 @@
 #' testdata[index]
   grepall <- function(dataframe, string, print_values = FALSE, ...) {
 
-  foo <- as.matrix(dataframe)
+  foo <- as.matrix(as.data.frame(dataframe))
   index1d <- which(grepl(pattern = string, x = foo, ...), arr.ind = TRUE)
 
   fooma <- matrix(data = 0, nrow = dim(foo)[1], ncol = dim(foo)[2])
@@ -29,11 +29,11 @@
   message(fsf::c2txt(names(dataframe)[unique(index2d[,2])], frame = "\"", separator = "\n"))
 
   message("\nunique strings:")
-  message(fsf::c2txt(unique(dataframe[index2d]), frame = "\"", separator = "\n"))
+  message(fsf::c2txt(unique(as.data.frame(dataframe)[index2d]), frame = "\"", separator = "\n"))
 
   message("\nFound ", nrow(index2d), " matches in ", length(unique(index2d[,2])), " columns.")
 
-  message("\nIndex returned invisible.")
+  message("\nIndex returned invisible (does not work with tibbles).")
   return(invisible(index2d))
 
 #     dataframe <- dplyr::as_tibble(dataframe)
