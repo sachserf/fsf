@@ -13,5 +13,8 @@ find_nonASCII(filepath)
 find Non-ASCII characters within a file
 }
 \note{
-use sapply to search for non ASCII characters in multiple files
+use sapply to search for non ASCII characters in multiple files.
+}
+\seealso{
+\code{\link[tools]{showNonASCIIfile}}
 }
