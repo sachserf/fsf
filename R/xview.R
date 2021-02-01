@@ -7,9 +7,9 @@
 #' @param deldep Logical. Specify if deprecated files should be deleted. works only if file_path begins with "xview_" followed by 14 integer values (default for exporting new files).
 #' @param open_doc Logical. Should document be opened afterwards?
 #' @param ... Further params passed to rio::export (e.g. overwrite, row.names, etc.)
-#' @param list_collapse Logical. Collapse list of dataframes? (depends on github-package d-notebook/sheetr)
+#' @param list_collapse Logical. Collapse list of dataframes? fsf::xview(split(iris, iris$Species), list_collapse = TRUE) will export a single sheet with visual splits between groups, while fsf::xview(split(iris, iris$Species), list_collapse = FALSE) will export 3 sheets (one for each species group)
 #'
-#' @seealso \code{\link[rio]{export}}, \code{\link[sheetr]{write_dataframes_to_csv}}
+#' @seealso \code{\link[rio]{export}} \code{\link[fsf]{write_dataframe_to_csv}}
 #'
 #' @author Frederik Sachser
 #' @export
@@ -30,7 +30,7 @@ xview <- function(x, file = paste0("xview_", now(), ".xlsx"), deldep = TRUE, lis
 
   if (list_collapse == TRUE & "list" %in% class(x)) {
     file <- paste0(tools::file_path_sans_ext(file), ".csv")
-    sheetr::write_dataframes_to_csv(x, file) ## devtools::install_github('d-notebook/sheetr') , na = "na"
+    fsf::write_dataframes_to_csv(x, file) ## devtools::install_github('d-notebook/sheetr') , na = "na"
   } else {
     rio::export(x = x, file = file, ...)
   }

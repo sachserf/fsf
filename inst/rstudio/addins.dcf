@@ -1,3 +1,8 @@
+Name: Insert docx-comment to current cursor position
+Description: Insert docx-comment to current cursor position (within RStudio)
+Binding: incmt
+Interactive: false
+
 Name: Insert "%in%" to current cursor position
 Description: Insert "%in%" to current cursor position (within RStudio)
 Binding: inin

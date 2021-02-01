@@ -10,6 +10,8 @@
 #' @author Frederik Sachser
 #' @export
 fe <- function(file, ...) {
+  file <- gsub(" $", "", file) # trim trailing whitespace
+
   if (file.exists(file)) {
     if (Sys.readlink(file) != "") {
       file.edit(Sys.readlink(file), ...)

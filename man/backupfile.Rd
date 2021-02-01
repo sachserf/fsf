@@ -4,9 +4,11 @@
 \alias{backupfile}
 \title{backup a file}
 \usage{
-backupfile(filepath = NULL)
+backupfile(filename = "", filepath = NULL)
 }
 \arguments{
+\item{filename}{Character. Specify description for filepath. Will be appended after original filename}
+
 \item{filepath}{Character. Specify file path you want to copy.}
 }
 \description{

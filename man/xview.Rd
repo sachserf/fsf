@@ -20,7 +20,7 @@ xview(
 
 \item{deldep}{Logical. Specify if deprecated files should be deleted. works only if file_path begins with "xview_" followed by 14 integer values (default for exporting new files).}
 
-\item{list_collapse}{Logical. Collapse list of dataframes? (depends on github-package d-notebook/sheetr)}
+\item{list_collapse}{Logical. Collapse list of dataframes? fsf::xview(split(iris, iris$Species), list_collapse = TRUE) will export a single sheet with visual splits between groups, while fsf::xview(split(iris, iris$Species), list_collapse = FALSE) will export 3 sheets (one for each species group)}
 
 \item{open_doc}{Logical. Should document be opened afterwards?}
 
@@ -30,7 +30,7 @@ xview(
 This function will export an object to a file (using package "rio"). A system command is invoked to open the file afterwards.
 }
 \seealso{
-\code{\link[rio]{export}}, \code{\link[sheetr]{write_dataframes_to_csv}}
+\code{\link[rio]{export}} \code{\link[fsf]{write_dataframe_to_csv}}
 }
 \author{
 Frederik Sachser

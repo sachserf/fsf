@@ -1,6 +1,6 @@
 Package: fsf
 Title: Collection of miscellanous functions
-Version: 0.0.0.9011
+Version: 0.0.0.9013
 Authors@R: person("Frederik", "Sachser", email = "f.sachser@gmx.at", role = c("aut", "cre"))
 Description: Miscellanous functions for different tasks.
 License: GPL (>= 2)
@@ -9,9 +9,8 @@ LazyData: true
 Depends:
     R (>= 3.2)
 Imports:
-    utils, rstudioapi, e1071, stringr, tools, stats, rio, sheetr, magrittr, dplyr, ggplot2, tidyr, skimr
-Remotes: github::d-notebook/sheetr
+    utils, rstudioapi, e1071, stringr, tools, stats, rio, magrittr, dplyr, ggplot2, tidyr, skimr
 Suggests:
     rmarkdown (>= 0.9.6),
     knitr
-RoxygenNote: 7.0.0
+RoxygenNote: 7.1.1
