@@ -24,10 +24,11 @@ cmt <- function(highlight = "", comment, name = Sys.info()["user"], thedate = Sy
 
     for (i in seq_along(filelist)) {
       #      expressionindex[[i]] <- grep("r cmt", readlist[[i]])
-      thisexpression[[i]] <- grep(comment, readlist[[i]])
+      thisexpression[[i]] <- grep(paste(highlight, "*", comment), readlist[[i]])
     }
 
-    my_id <- as.integer(paste0(foo, thisexpression[foo])) # paste doc-number and line
+    documentwithexpression <- which(thisexpression > 0)
+    my_id <- as.integer(paste0(documentwithexpression, thisexpression[documentwithexpression], sample(1:1000, 1))) # paste doc-number and line
 
     #    which(thisexpression %in% expressionindex)
     #    my_id <- sum(sapply(expressionindex, length))
