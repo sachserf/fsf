@@ -13,6 +13,10 @@
 #'
 #' @author Frederik Sachser
 #' @export
+#'
+#' @examples
+#' #not run:
+#' xview(split.data.frame(iris, iris$Species))
 xview <- function(x, file = paste0("xview_", now(), ".xlsx"), deldep = TRUE, list_collapse = TRUE, open_doc = TRUE, ...) {
   if (deldep == TRUE) {
     lapply(list.files(path = ".", pattern = "^xview_\\d{14}"), file.remove, recursive = TRUE)

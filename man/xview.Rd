@@ -29,6 +29,10 @@ xview(
 \description{
 This function will export an object to a file (using package "rio"). A system command is invoked to open the file afterwards.
 }
+\examples{
+#not run:
+xview(split.data.frame(iris, iris$Species))
+}
 \seealso{
 \code{\link[rio]{export}} \code{\link[fsf]{write_dataframe_to_csv}}
 }
