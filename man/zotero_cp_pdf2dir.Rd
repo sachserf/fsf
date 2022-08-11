@@ -4,10 +4,12 @@
 \alias{zotero_cp_pdf2dir}
 \title{copy files from zotero into a single dir}
 \usage{
-zotero_cp_pdf2dir(CSV)
+zotero_cp_pdf2dir(CSV, symlink_only = TRUE)
 }
 \arguments{
 \item{CSV}{Character. Specify file path to a csv-file containing metadata of selected publications. You need to export this preformatted csv-file from zotero beforehand.}
+
+\item{symlink_only}{Logical. Set True if files should be linked and not copied.}
 }
 \description{
 copy files from zotero into a single dir

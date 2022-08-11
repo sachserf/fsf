@@ -24,7 +24,7 @@ xview <- function(x, file = paste0("xview_", now(), ".xlsx"), deldep = TRUE, lis
   if (Sys.info()["sysname"] == "Linux") {
     cmd <- "xdg-open"
   } else if (Sys.info()["sysname"] == "Windows") {
-    cmd <- "shell.exec" # start
+    cmd <- "open" #"shell.exec" # start
   } else if (Sys.info()["sysname"] == "Darwin") {
     cmd <- "open"
   } else if (Sys.info()["sysname"] %in% c("Linux", "Darwin", "Windows") == FALSE) {
