@@ -11,9 +11,6 @@ group_by_diff(x, difference = 1)
 
 \item{difference}{Integer. Specify maximum within-group difference.}
 }
-\value{
-
-}
 \description{
 create groups by numerical difference threshold
 }

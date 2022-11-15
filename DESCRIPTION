@@ -13,4 +13,4 @@ Imports:
 Suggests:
     rmarkdown (>= 0.9.6),
     knitr
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.1
