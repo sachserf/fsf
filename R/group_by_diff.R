@@ -3,7 +3,6 @@
 #' @param x numeric. Vector that should be binned into groups. Also possible with Dates.
 #' @param difference Integer. Specify maximum within-group difference.
 #'
-#' @return
 #' @export
 #'
 #' @note vector should be arranged (sorted) prior to group_by_diff.
