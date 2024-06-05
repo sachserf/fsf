@@ -12,7 +12,7 @@
 #' @author Frederik Sachser
 #' @export
 findlines <- function(expression = "# magic word", exclusive = FALSE, path = ".", filepattern = "\\.R$|\\.Rmd$", recursive = TRUE) {
-  filelist <- list.files(path = path, pattern = filepattern, recursive = recursive)
+  filelist <- list.files(path = path, pattern = filepattern, recursive = recursive, full.names = TRUE)
   readlist <- lapply(filelist, readLines)
   names(readlist) <- filelist
 
